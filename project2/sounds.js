@@ -2,6 +2,10 @@ window.addEventListener("keydown", function (e) {
   const audio = document.querySelector(`audio[data-key="${e.key}"]`);
   const key = document.querySelector(`div[data-key="${e.key}"]`);
 
+  console.log(`Key pressed: ${e.key}`);
+  console.log(`Audio element:`, audio);
+  console.log(`Key element:`, key);
+
   if (!audio) return; // Stop the function from running if no audio element matches the key pressed
 
   audio.currentTime = 0; // Rewind to the start
